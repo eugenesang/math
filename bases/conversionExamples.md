@@ -1,4 +1,4 @@
-# More examples 
+# More examples
 
 ## Decimal to Binary
 
