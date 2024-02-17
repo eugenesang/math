@@ -1,0 +1,198 @@
+1
+Patterns
+Explore patterns in the sums 1∙2+2∙3+3∙4+⋯+𝑛∙(𝑛+1) and so on. Use proof by induction to justify your conjecture.
+𝑓(𝑛)= Σ𝑛∙(𝑛+1)= Σ𝑖∙(𝑖+1)𝑛𝑖=1
+The pattern is expanded to reveal more patterns in it,
+1∙2+2∙3+3∙4+⋯+𝑛∙(𝑛+1)⟹1∙(1+1)+2∙(2+1)+3∙(3+1)+⋯+𝑛∙(𝑛+1) ⟹ (12+1)+(22+2)+(32+3)+⋯+(𝑛2+𝑛)
+From here we separate the two sequences of 𝑛2 and 𝑛 to get: (12+22+32+⋯+𝑛2)+(1+2+3+⋯+𝑛)
+From this we can see that the sum of n terms can be given by adding sums of 𝑛2 and 𝑛 ⟹ Σ𝑛2+Σ𝑛.
+To test this, let’s consider n=3; 𝑓(3)=1∙2+2∙3+3∙4=2+6+12=20. Now we run separate sums of 𝑛2 and 𝑛. Σ𝑛2,(𝑛=3) ⟹12+22+32 ⟹1+4+9=14 Σ𝑛,( 𝑛=3)⇒1+2+3=6
+Adding them together we get Σ𝑛2+Σ𝑛=14+6=20.
+This holds for other numbers as well
+𝑛
+Σ𝑛
+Σ𝑛2
+Σ𝑛+Σ𝑛2
+𝑓(𝑥)
+1
+1
+1
+2
+2
+2
+3
+5
+8
+8
+3
+6
+14
+20
+20
+4
+10
+30
+40
+40
+5
+15
+55
+70
+70
+The sum of the sequence 1+2+3+⋯+𝑛 is denoted by Σ𝑛=Σ𝑖= 𝑛2+𝑛2𝑛𝑖=1
+It is proven to be true but we will give it a random test. When n=12. 1+2+3+4+5+6+7+8+9+10+11+12=78,𝑏𝑦 𝑐𝑜𝑢𝑛𝑡𝑖𝑛𝑔
+Check if our function will yield the same result: 122+122= 144+122= 72+6=78,𝑇𝑟𝑢𝑒
+2
+We move on to another sequence
+The sum of the sequence 12+22+32+⋯+𝑛2 is given by Σ𝑛2=Σ𝑖2= 2𝑛3+3𝑛2+𝑛6𝑛𝑖=1
+More tests on this and the previous formula are shown in a table at page 4.
+We now get that the solution of 𝑓(𝑛)= Σ𝑛+Σ𝑛2. We can actually sum the two functions to get 𝑓(𝑛)=Σ𝑛+Σ𝑛2⟹Σ𝑖2+𝑖⟹𝑛𝑖=1[𝑛2+𝑛2]+[2𝑛3+3𝑛2+𝑛6]⟹ 3𝑛2+3𝑛+2𝑛3+3𝑛2+𝑛6⟹2𝑛3+6𝑛2+4𝑛6⟹ 𝑛3+3𝑛2+2𝑛3
+Now we have our equation for the pattern, time to prove it. We are going to prove it using proof by induction
+Proof:
+Conjecture: The sum of the pattern 1∙2+2∙3+3∙4+⋯+𝑛∙(𝑛+1) for n number of terms is given by 𝑓(𝑛)=𝑛3+3𝑛2+2𝑛3
+Base case:
+𝑓(𝑛) when 𝑛=1, in other words does 𝑓(1) hold? 𝑠𝑢𝑚=1∙2=2 𝑓(1)=13+3(1)2+2(1)3=1+3+23=63=2,𝑡𝑟𝑢𝑒
+Induction:
+Hypothesis:
+Assume 𝑓(𝑘) is true for some 𝑘
+Induction step:
+Proof that the conjecture holds for some 𝑓(𝑘+1) 𝑓(𝑘+1)=(𝑘+1)3+3(𝑘+1)2+2(𝑘+1)3⟹𝒆𝒒𝒖𝒂𝒕𝒊𝒐𝒏 𝟏
+From the pattern we can also get 𝑓(𝑘+1)=𝑓(𝑘)+(𝑘+1)∙(𝑘+2)⟹𝒆𝒒𝒖𝒂𝒕𝒊𝒐𝒏 𝟐
+since 𝑓(𝑛)=𝑓(𝑛−1)+𝑛∙(𝑛+1) i.e., 𝑓(8)=𝑓(7)+8∙9
+Simplifying equation 1, (𝑘+1)3= 𝑘3+3𝑘2+3𝑘+1
+3
+3(𝑘+1)2=3𝑘2+6𝑘+3 2(𝑘+1)=2𝑘+2
+The sum of the numerator becomes 𝑘3+6𝑘2+11𝑘+6 so it becomes 𝒆𝒒𝒖𝒂𝒕𝒊𝒐𝒏 𝟏 ⟹𝑘3+6𝑘2+11𝑘+6 3
+Simplifying equation 2, 𝑓(𝑘)=𝑘3+3𝑘2+2𝑘3 𝑓(𝑘+1)=𝑘3+3𝑘2+2𝑘3+(𝑘+1)∙(𝑘+2) 𝑓(𝑘+1)=𝑘3+3𝑘2+2𝑘3+𝑘2+3𝑘+21=𝑘3+3𝑘2+2𝑘+3𝑘2+9𝑘+63 𝑓(𝑘+1)=𝑘3+6𝑘2+11𝑘+63 ⟹ 𝒆𝒒𝒖𝒂𝒕𝒊𝒐𝒏 𝟐
+We see that equation 1 = equation 2
+Conclusion:
+For the pattern 1∙2+2∙3+3∙4+⋯+𝑛∙(𝑛+1) denoted as Σ𝑖∙(𝑖+1)𝑛𝑖=1
+The sum to a given number of terms is given by a function 𝑓(𝑛)=𝑛3+3𝑛2+2𝑛3
+Summary
+The table bellow shows the summary and further proof that indeed the conjecture is water tight.
+Table keys,
+Σ𝒊∙(𝒊+𝟏)𝒏𝒊=𝟏=1∙2+2∙3+3∙4+⋯+𝑛∙(𝑛+1) Σ𝑛=1+2+3+⋯+𝑛 Σ𝑛2=12+22+32+⋯+𝑛2 Σ𝒏+Σ𝒏𝟐=(1+2+3+⋯+𝑛)+(12+22+32+⋯+𝑛2)
+The colored columns are the different ways you can compute the sum of the sequence
+4
+Table n Σ𝒊∙(𝒊+𝟏)𝒏𝒊=𝟏 Σ𝒏 Σ𝒏𝟐 Σ𝒏+Σ𝒏𝟐 n² n³ 𝒏𝟑+𝟑𝒏𝟐+𝟐𝒏𝟑 1 2
+1
+1 2
+1
+1 2 2 8
+3
+5 8
+4
+8 8 3 20
+6
+14 20
+9
+27 20 4 40
+10
+30 40
+16
+64 40 5 70
+15
+55 70
+25
+125 70 6 112
+21
+91 112
+36
+216 112 7 168
+28
+140 168
+49
+343 168 8 240
+36
+204 240
+64
+512 240 9 330
+45
+285 330
+81
+729 330 10 440
+55
+385 440
+100
+1000 440 11 572
+66
+506 572
+121
+1331 572 12 728
+78
+650 728
+144
+1728 728 13 910
+91
+819 910
+169
+2197 910 14 1120
+105
+1015 1120
+196
+2744 1120 15 1360
+120
+1240 1360
+225
+3375 1360 16 1632
+136
+1496 1632
+256
+4096 1632 17 1938
+153
+1785 1938
+289
+4913 1938 18 2280
+171
+2109 2280
+324
+5832 2280 19 2660
+190
+2470 2660
+361
+6859 2660 20 3080
+210
+2870 3080
+400
+8000 3080 21 3542
+231
+3311 3542
+441
+9261 3542 22 4048
+253
+3795 4048
+484
+10648 4048 23 4600
+276
+4324 4600
+529
+12167 4600 24 5200
+300
+4900 5200
+576
+13824 5200 25 5850
+325
+5525 5850
+625
+15625 5850 26 6552
+351
+6201 6552
+676
+17576 6552 27 7308
+378
+6930 7308
+729
+19683 7308 28 8120
+406
+7714 8120
+784
+21952 8120 29 8990
+435
+8555 8990
+841
+24389 8990 30 9920
+465
+9455 9920
+900
+27000 9920
+5
