@@ -1,12 +1,12 @@
-﻿**Patterns**  
+﻿# **Patterns**  
 
-**Explore patterns in the sums** 1 ∙ 2 + 2 ∙ 3 + 3 ∙ 4 + ⋯+ ∙ ( + 1) **and so on. Use proof by** 
+**Explore patterns in the sums** 1 ∙ 2 + 2 ∙ 3 + 3 ∙ 4 + ⋯+ ∙ ( + 1) **and so on. Use proof by**
 
-**induction to justify your conjecture.** ( ) = ∑ ∙ ( + 1) = ∑ ∙ ( + 1) 
+**induction to justify your conjecture.** ( ) = ∑ ∙ ( + 1) = ∑ ∙ ( + 1)
 
 =1
 
-The pattern is expanded to reveal more patterns in it, 
+The pattern is expanded to reveal more patterns in it,
 
 1 ∙ 2 + 2 ∙ 3 + 3 ∙ 4 + ⋯+ ∙ ( + 1) ⟹ 1 ∙ (1 + 1) + 2 ∙ (2 + 1) + 3 ∙ (3 + 1) + ⋯+ ∙ ( + 1) ⟹  (12 + 1) + (22 + 2) + (32 + 3) + ⋯+ ( 2 + ) 
 
