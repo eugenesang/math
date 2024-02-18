@@ -41,8 +41,6 @@ int main()
     int ans = chadFn(n);
     int count = rawSum(n);
     int sqSum = rawSquareSum(n);
-    cout << ans << "\n"
-         << count << "\n"
-         << sqSum << endl;
+    cout << ans << "\n" << count << "\n" << sqSum << endl;
     // Should show three lines of the same value 5592320
 }
