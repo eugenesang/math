@@ -7,6 +7,7 @@ function rawSum(n) {
     }
     return sum;
 }
+
 console.log(rawSum(12));// expect 728
 
 function rawSquaredSum(n) {
@@ -18,7 +19,8 @@ function rawSquaredSum(n) {
     }
     return rawTotal + squaredTotal;
 }
-console.log(rawSquaredSum(28)) // 8120
+
+console.trace(rawSquaredSum(28)) // 8120
 
 function chadFn(n) {
     if (n < 1) return new Error('n cannot be less than 0');
@@ -27,6 +29,7 @@ function chadFn(n) {
     let numerator = nCubed + 3 * nSquared + 2 * n;
     return numerator / 3;
 }
+
 function proof() {
     const testArray = createRangeArray();
     console.log(testArray); // see what has been generated, comment if you don't want to
@@ -47,6 +50,7 @@ function proof() {
     }
     return true
 }
+
 function createRangeArray() {
     const minValue = 200; // set your minimum value greater than 1;
     const range = 800; // this is such that max value of the start number = minValue + range;
@@ -56,4 +60,5 @@ function createRangeArray() {
     for (let i = 0; i < size; i++) arr.push(startNumber + i);
     return arr;
 }
+
 console.log(proof()); // returns true, every time
