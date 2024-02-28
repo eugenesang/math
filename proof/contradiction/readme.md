@@ -1,2 +1,1 @@
 # Proof by contradiction
-
