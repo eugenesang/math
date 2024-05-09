@@ -12,21 +12,19 @@ raw.toString().split('\n').filter(d=>d).map(d=>{
     }
 }).sort((a, b)=>a.n - b.n);
 
-function getIndices(max){
+function makePyramid(max){
     const arr = [];
+    for(let i=1; i<=max; i++){
+        arr.push(i);
+    }
 
-    
+    let cur = 1;
 
-    let index = 1;
-    while(sqFn(index) < max){
-        arr.push(sqFn(index++));
-    };
+    const ans = [];
 
-    arr.push(max)
+    while(arr.length){
+        ans.push(arr.splice(0, cur++));
+    }
 
-    return arr.map(d=>d-1);
+    return ans;
 }
-
-const words = getIndices(arr.length).map(d=>arr[d]['t']);
-
-console.log(words);
