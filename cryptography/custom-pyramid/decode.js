@@ -3,28 +3,30 @@ const fs = require('fs');
 // read the coding dictionary
 const raw =  fs.readFileSync("./coding_qual_input.txt");
 
-const dict = {};
-
-raw.toString().split('\n').filter(d=>d).forEach(d=>{
+// const dict = {};
+const arr = 
+raw.toString().split('\n').filter(d=>d).map(d=>{
     const [n, t] = d.split(' ');
-    dict[n]=t;
-})
+    return {
+        n, t: t.trim()
+    }
+}).sort((a, b)=>a.n - b.n);
 
-function decode(message){
-    const arr = message.split('\n').filter(d=>d).map(d=>d.split(' ').pop());
-    const str = arr.map(d=>dict[d]).map(d=>d.trim());
+function getIndices(max){
+    const arr = [];
 
-    return str.join(" ");
+    
+
+    let index = 1;
+    while(sqFn(index) < max){
+        arr.push(sqFn(index++));
+    };
+
+    arr.push(max)
+
+    return arr.map(d=>d-1);
 }
 
-// we wait to cook our milk
-const encodedMessage = `
-162
-12 191
-34 18 103
-1 3 89 187
-12 34 56 17 47
-89 67 34 92 12 91
-`
+const words = getIndices(arr.length).map(d=>arr[d]['t']);
 
-console.log(decode(encodedMessage));
+console.log(words);
