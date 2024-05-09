@@ -17,6 +17,7 @@ function decode(message){
     return str.join(" ");
 }
 
+// we wait to cook our milk
 const encodedMessage = `
 162
 12 191
