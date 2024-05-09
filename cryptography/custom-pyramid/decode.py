@@ -14,6 +14,15 @@ def get_indices(maximum):
 
     return [d - 1 for d in arr]
 
+def print_pyramid(maximum):
+    arr = list(range(1, maximum + 1))
+    cur = 1
+
+    while arr:
+        print(" ".join(str(num) for num in arr[:cur]))
+        arr = arr[cur:]
+        cur += 1
+
 def decode(filename):
     # Open and read the coding dictionary file
     with open(filename, "r") as file:
@@ -31,7 +40,10 @@ def decode(filename):
     # Sort the list based on the 'n' value
     arr.sort(key=lambda x: x['n'])
     
-    words = [arr[d]['t'] for d in get_indices(len(arr))]
+    indices = get_indices(len(arr))
+    print_pyramid(len(arr))
+    
+    words = [arr[d]['t'] for d in indices]
     
     return " ".join(words)
 
